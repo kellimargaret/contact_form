@@ -15,7 +15,7 @@
                 <ul>
         {% for contact in contacts %}
                       <li><strong>{{ contact.getName }}</strong></li>
-                      <li><abbr title='Phone'>{{ contact.getPhoneNumber }} </abbr></li>
+                      <li>{{ contact.getPhoneNumber }} </li>
                       <li>{{ contact.getAddress }}</li>
                       <li><a href="mailto:{{ contact.getEmail }}">{{ contact.getEmail }} </a></li>
                       <br>
@@ -24,29 +24,31 @@
           {% endif %}
     </div>
     <div class='container'>
-        <h1>Add a New Contact</h1>
-            <form action='/contacts' method='post' class='form-horizontal'>
+        <div class='col-sm-4'>
+            <h1>Add a New Contact</h1>
+                <form action='/contacts' method='post' class='form-horizontal'>
+                    <div class='form-group'>
+                        <label for='name'>Contact Name: </label>
+                            <input id='name' name='name' type='text' placeholder='Enter Name' class='form-control'>
+                   </div>
                 <div class='form-group'>
-                    <label for='name'>Contact Name: </label>
-                        <input id='name' name='name' type='text' placeholder='Enter Name'>
-               </div>
-            <div class='form-group'>
-                <label for='phonenumber'>Phone Number: </label>
-                    <input id='phonenumber' name='phonenumber' type='tel' placeholder='Enter Phone Number'>
-            </div>
-            <div class='form-group'>
-                <label for='address'>Address: </label>
-                    <input id='address' name='address' type='text' placeholder='Enter Address'>
-            </div>
-            <div class='form-group'>
-                <label for='email'>Email: </label>
-                    <input id='email' name='email' type='email' placeholder='Enter Email'>
-            </div>
-                <button type='submit' class='btn btn-success'>Add Contact</button>
-            </form>
-            <form action='/delete_contacts' method='post'>
-                <button type='submit' class='btn btn-danger'>Clear</button>
+                    <label for='phonenumber'>Phone Number: </label>
+                        <input id='phonenumber' name='phonenumber' type='tel' placeholder='Enter Phone Number' class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label for='address'>Address: </label>
+                        <input id='address' name='address' type='text' placeholder='Enter Address' class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label for='email'>Email: </label>
+                        <input id='email' name='email' type='email' placeholder='Enter Email' class='form-control'>
+                </div>
+                    <button type='submit' class='btn btn-success'>Add Contact</button>
+                </form><br>
+                <form action='/delete_contacts' method='post'>
+                    <button type='submit' class='btn btn-danger'>Clear</button>
           </form>
+      </div>
     </div>
 </body>
 </html>
