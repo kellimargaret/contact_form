@@ -1,0 +1,21 @@
+/* GENERAL */
+
+body {
+    background-color: #fff;
+    color: #3b3b3b;
+    font: 16px; 'Open Sans', sans-serif;
+}
+
+ul li {
+    border-right: none;
+    vertical-align: top;
+    float: none;
+}
+
+.container {
+  max-width: 600px;
+}
+
+input.form-control {
+    width: 30%;
+}

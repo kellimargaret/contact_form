@@ -1,18 +1,20 @@
 <html>
 <head>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='css/styles.css'>
-    <link rel='stylesheet' href='css/normalize.css'>
-    <link rel='stylesheet' href='css/responsive.css'>
+    <link rel='stylesheet' href='css/styles.css' media='all'>
+    <link rel='stylesheet' href='css/normalize.css' media='all'>
+    <link rel='stylesheet' href='css/responsive.css' media='all'>
     <title>Address Book</title>
 </head>
 <body>
     <div class='container'>
         <h1>Your New Contact:</h1>
-        <p>{{ newcontact.getName }}</p>
-        <p>{{ newcontact.getPhoneNumber }}</p>
-        <p>{{ newcontact.getAddress }}</p>
-        <p><a href='/'>View your list of contacts.</a></p>
+        <li><strong>{{ newcontact.getName }}</strong></li>
+        <li><abbr title='Phone'>{{ newcontact.getPhoneNumber }} </abbr></li>
+        <li>{{ newcontact.getAddress }}</li>
+        <li><a href="mailto:{{ contact.getEmail }}">{{ newcontact.getEmail }} </a></li>
+        <br>
+        <h3><a href='/'>View your address book.</a></h3>
     </div>
 </body>
 </html>

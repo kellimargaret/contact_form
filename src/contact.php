@@ -4,12 +4,14 @@ class Contact
     private $name;
     private $phonenumber;
     private $address;
+    private $email;
 
-    function __construct($name, $phonenumber, $address)
+    function __construct($name, $phonenumber, $address, $email)
     {
         $this->name = $name;
         $this->phonenumber = $phonenumber;
         $this->address = $address;
+        $this->email = $email;
     }
 
     function setName($new_name)
@@ -40,6 +42,16 @@ class Contact
     function getAddress()
     {
         return $this->address;
+    }
+
+    function setEmail($new_email)
+    {
+        $this->email = (string) $new_email;
+    }
+
+    function getEmail()
+    {
+        return $this->email;
     }
 
     function save()
