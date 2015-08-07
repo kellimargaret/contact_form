@@ -17,10 +17,15 @@
       {% endif %}
 
       <form action='/contacts' method='post'>
-          <label for='name>'Contact Name</label>
-          <input id='name' name='name' type='text'>
-
-          <button type='submit'>Add task</button>
+          <div class='form-group'>
+              <label for='name'>Contact Name</label>
+              <input id='name' name='name' type='text'>
+              <label for='phonenumber'>Phone Number</label>
+              <input id='phonenumber' name='phonenumber' type='number'>
+              <label for='address'>Address</label>
+              <input id='address' name='address' type='text'>
+          </div>
+          <button type='submit'>Add Contact</button>
       </form>
       <form action='/delete_contacts' method='post'>
           <button type='submit'>Clear</button>
