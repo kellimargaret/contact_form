@@ -9,11 +9,13 @@
 <body>
     <div class='container'>
         <h1>Your New Contact:</h1>
-        <li><strong>{{ newcontact.getName }}</strong></li>
-        <li>{{ newcontact.getPhoneNumber }} </li>
-        <li>{{ newcontact.getAddress }}</li>
-        <li><a href="mailto:{{ contact.getEmail }}">{{ newcontact.getEmail }} </a></li>
-        <br>
+        <ul>
+            <li><strong>{{ newcontact.getName }}</strong></li>
+            <li>{{ newcontact.getPhoneNumber }} </li>
+            <li>{{ newcontact.getAddress }}</li>
+            <li><a href="mailto:{{ contact.getEmail }}">{{ newcontact.getEmail }} </a></li>
+            <br>
+        </ul>
         <h3><a href='/'>View your address book.</a></h3>
     </div>
 </body>
